@@ -30,7 +30,7 @@ if (annyang) {
         // Update Sidebar Title
         document.getElementById("outputTitle").innerHTML =
           "Museums and Galleries";
-
+        document.getElementById("output").innerHTML = "";
         let list = document.createElement("ul");
         document.getElementById("output").appendChild(list);
         for (let i = 0; i < Museums_and_Galleries.features.length; i++) {
