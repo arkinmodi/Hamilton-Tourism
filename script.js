@@ -5,6 +5,7 @@ if (annyang) {
     // List the commands
     "list commands": function () {
       document.getElementById("outputTitle").innerHTML = "Commands";
+      document.getElementById("output").innerHTML = "";
       // Create an unordered list element and add script as items
       let list = document.createElement("ul");
       document.getElementById("output").appendChild(list);
@@ -98,3 +99,16 @@ function loadmap() {
     searchManager = new Microsoft.Maps.Search.SearchManager(map);
   });
 }
+
+// Commands Button (Same as "list commands" above)
+document.getElementById("commands").onclick = function () {
+  document.getElementById("outputTitle").innerHTML = "Commands";
+  document.getElementById("output").innerHTML = "";
+  let list = document.createElement("ul");
+  document.getElementById("output").appendChild(list);
+  script.forEach(function (cmd) {
+    let item = document.createElement("li");
+    list.appendChild(item);
+    item.innerHTML += cmd;
+  });
+};
