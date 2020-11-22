@@ -2,6 +2,7 @@ let script = [
   "Show museums and galleries",
   "Show beaches",
   "Show universities",
+  "Clear map",
 ];
 
 if (annyang) {
