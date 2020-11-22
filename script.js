@@ -1,4 +1,4 @@
-let script = ["Show museums and galleries"];
+let script = ["Show museums and galleries", "Show beaches"];
 
 if (annyang) {
   var commands = {
@@ -47,6 +47,27 @@ if (annyang) {
                 Museums_and_Galleries.features[i].properties.LONGITUDE
               ),
               { title: Museums_and_Galleries.features[i].properties.NAME }
+            )
+          );
+        }
+      } else if (type.includes("beaches")) {
+        // Beaches
+        document.getElementById("outputTitle").innerHTML = "Beaches";
+        document.getElementById("output").innerHTML = "";
+        let list = document.createElement("ul");
+        document.getElementById("output").appendChild(list);
+        for (let i = 0; i < Beaches.features.length; i++) {
+          let item = document.createElement("li");
+          list.appendChild(item);
+          item.innerHTML += Beaches.features[i].properties.NAME;
+
+          map.entities.push(
+            new Microsoft.Maps.Pushpin(
+              new Microsoft.Maps.Location(
+                Beaches.features[i].properties.LATITUDE,
+                Beaches.features[i].properties.LONGITUDE
+              ),
+              { title: Beaches.features[i].properties.NAME }
             )
           );
         }
