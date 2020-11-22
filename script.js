@@ -1,4 +1,8 @@
-let script = ["Show museums and galleries", "Show beaches"];
+let script = [
+  "Show museums and galleries",
+  "Show beaches",
+  "Show universities",
+];
 
 if (annyang) {
   var commands = {
@@ -68,6 +72,36 @@ if (annyang) {
                 Beaches.features[i].properties.LONGITUDE
               ),
               { title: Beaches.features[i].properties.NAME }
+            )
+          );
+        }
+      } else if (type.includes("universities")) {
+        // Universities
+        document.getElementById("outputTitle").innerHTML = "Universities";
+        document.getElementById("output").innerHTML = "";
+        let list = document.createElement("ul");
+        document.getElementById("output").appendChild(list);
+        for (let i = 0; i < Educational_Institutions.features.length; i++) {
+          // Skip if not a university
+          if (
+            Educational_Institutions.features[i].properties.CATEGORY !==
+            "Post Secondary"
+          ) {
+            continue;
+          }
+
+          let item = document.createElement("li");
+          list.appendChild(item);
+          item.innerHTML +=
+            Educational_Institutions.features[i].properties.NAME;
+
+          map.entities.push(
+            new Microsoft.Maps.Pushpin(
+              new Microsoft.Maps.Location(
+                Educational_Institutions.features[i].properties.LATITUDE,
+                Educational_Institutions.features[i].properties.LONGITUDE
+              ),
+              { title: Educational_Institutions.features[i].properties.NAME }
             )
           );
         }
