@@ -1,4 +1,5 @@
 Show museums and galleries
 Show beaches
 Show universities
+Show fun places
 Clear map
