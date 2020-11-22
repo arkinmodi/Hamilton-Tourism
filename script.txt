@@ -2,4 +2,5 @@ Show museums and galleries
 Show beaches
 Show universities
 Show fun places
+Show waterfalls
 Clear map

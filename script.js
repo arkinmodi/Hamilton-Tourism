@@ -3,6 +3,7 @@ let script = [
   "Show beaches",
   "Show universities",
   "Show fun places",
+  "Show waterfalls",
   "Clear map",
 ];
 
@@ -180,6 +181,32 @@ if (annyang) {
                 funPlaces[i].longitude
               ),
               { title: funPlaces[i].name }
+            )
+          );
+        }
+      } else if (type.includes("waterfalls")) {
+        // Waterfalls
+        document.getElementById("outputTitle").innerHTML = "Public Waterfalls";
+        document.getElementById("output").innerHTML = "";
+        let list = document.createElement("ul");
+        document.getElementById("output").appendChild(list);
+        for (let i = 0; i < City_Waterfalls.features.length; i++) {
+          // Skip if not a public waterfall
+          if (City_Waterfalls.features[i].properties.OWNERSHIP !== "public") {
+            continue;
+          }
+
+          let item = document.createElement("li");
+          list.appendChild(item);
+          item.innerHTML += City_Waterfalls.features[i].properties.NAME;
+
+          map.entities.push(
+            new Microsoft.Maps.Pushpin(
+              new Microsoft.Maps.Location(
+                City_Waterfalls.features[i].properties.LATITUDE,
+                City_Waterfalls.features[i].properties.LONGITUDE
+              ),
+              { title: City_Waterfalls.features[i].properties.NAME }
             )
           );
         }
