@@ -30,3 +30,9 @@ p {
   width: 25%;
   padding: 20px;
 }
+
+.outputBody {
+  font-size: 24px;
+  overflow-y: scroll;
+  height: 75vh;
+}
