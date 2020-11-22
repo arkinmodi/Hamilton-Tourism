@@ -29,7 +29,7 @@ let Museums_and_Galleries = {
       type: "Feature",
       properties: {
         OBJECTID: 2,
-        NAME: "Fieldcote Memorial Park And Museum",
+        NAME: "Fieldcote Memorial Park & Museum",
         LONGITUDE: "-79.9800396448889",
         LATITUDE: "43.22623097578291",
         ADDRESS: "64 Sulphur Springs Road",
@@ -112,7 +112,7 @@ let Museums_and_Galleries = {
       type: "Feature",
       properties: {
         OBJECTID: 7,
-        NAME: "Canadian Football Hall Of Fame And Museum",
+        NAME: "Canadian Football Hall of Fame & Museum",
         LONGITUDE: "-79.83122957246466",
         LATITUDE: "43.251825443398296",
         ADDRESS: "64 Melrose Avenue North, Tim Hortons Field, 4th level",
@@ -128,7 +128,7 @@ let Museums_and_Galleries = {
       type: "Feature",
       properties: {
         OBJECTID: 8,
-        NAME: "Whitehern Historic House And Garden National Histo",
+        NAME: "Whitehern Historic House & Garden National Historic Site",
         LONGITUDE: "-79.87201710746996",
         LATITUDE: "43.254584683398264",
         ADDRESS: "41 Jackson Street West",
@@ -162,7 +162,7 @@ let Museums_and_Galleries = {
       type: "Feature",
       properties: {
         OBJECTID: 10,
-        NAME: "Hamilton Museum Of Steam And Technology National H",
+        NAME: "Hamilton Museum of Steam & Technology National Historic Site",
         LONGITUDE: "-79.77199666931459",
         LATITUDE: "43.2565160903868",
         ADDRESS: "900 Woodward Avenue",
@@ -179,7 +179,7 @@ let Museums_and_Galleries = {
       type: "Feature",
       properties: {
         OBJECTID: 11,
-        NAME: "Battlefield House Museum And Park National Histori",
+        NAME: "Battlefield House Museum & Park National Historic Site",
         LONGITUDE: "-79.76609660077854",
         LATITUDE: "43.2176066549465",
         ADDRESS: "77 King Street West",
