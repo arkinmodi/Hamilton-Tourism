@@ -2,7 +2,61 @@ let script = [
   "Show museums and galleries",
   "Show beaches",
   "Show universities",
+  "Show fun places",
   "Clear map",
+];
+
+let funPlaces = [
+  {
+    name: "Royal Botanical Gardens",
+    latitude: 43.2899,
+    longitude: -79.8751,
+  },
+  {
+    name: "Wild Waterworks",
+    latitude: 43.2454,
+    longitude: -79.7456,
+  },
+  {
+    name: "Canadian Warplane Heritage Museum",
+    latitude: 43.15945178905186,
+    longitude: -79.92520011963968,
+  },
+  {
+    name: "Dundurn Castle",
+    latitude: 43.2695,
+    longitude: -79.8842,
+  },
+  {
+    name: "Bayfront Park",
+    latitude: 43.2716,
+    longitude: -79.8724,
+  },
+  {
+    name: "Albion Falls",
+    latitude: 43.2004,
+    longitude: -79.8196,
+  },
+  {
+    name: "Fifty Point Conservation Area",
+    latitude: 43.2175,
+    longitude: -79.6282,
+  },
+  {
+    name: "HMCS Haida (Docked Naval Destroyer)",
+    latitude: 43.2754,
+    longitude: -79.8555,
+  },
+  {
+    name: "Devil's Punchbowl Conservation Area",
+    latitude: 43.2111,
+    longitude: -79.7567,
+  },
+  {
+    name: "Art Gallery of Hamilton",
+    latitude: 43.2572413238943,
+    longitude: -79.87240736848725,
+  },
 ];
 
 if (annyang) {
@@ -103,6 +157,29 @@ if (annyang) {
                 Educational_Institutions.features[i].properties.LONGITUDE
               ),
               { title: Educational_Institutions.features[i].properties.NAME }
+            )
+          );
+        }
+      } else if (type.includes("fun")) {
+        // Fun Places
+        document.getElementById("outputTitle").innerHTML =
+          "Fun Places to Visit";
+        document.getElementById("output").innerHTML = "";
+
+        let list = document.createElement("ul");
+        document.getElementById("output").appendChild(list);
+        for (let i = 0; i < funPlaces.length; i++) {
+          let item = document.createElement("li");
+          list.appendChild(item);
+          item.innerHTML += funPlaces[i].name;
+
+          map.entities.push(
+            new Microsoft.Maps.Pushpin(
+              new Microsoft.Maps.Location(
+                funPlaces[i].latitude,
+                funPlaces[i].longitude
+              ),
+              { title: funPlaces[i].name }
             )
           );
         }
