@@ -211,6 +211,10 @@ if (annyang) {
           );
         },
       };
+
+      document.getElementById("outputTitle").innerHTML = "Custom Search";
+      document.getElementById("output").innerHTML = catchall;
+
       searchManager.geocode(requestOptions);
     },
   };
