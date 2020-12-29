@@ -4,7 +4,7 @@ Assignment 6 for SFWRENG 4HC3 - Human Computer Interfaces
 
 ## Overview
 
-The goal of this app is to create a voice user interface where tourists can ask the app for possible places to visit. The app features a map with a sidebar. When the tourist asks for a type of destination, the locations will be plotted on the map and the names with be listed on the sidebar.
+The goal of this app is to create a voice user interface where tourists can ask the app for possible places to visit. The app features a map with a sidebar. When the tourist asks for a type of destination, the locations will be plotted on the map with the names listed on the sidebar.
 
 > Note: This application was designed to used in Hamilton, Ontario, Canada on a Samsung Galaxy Tab A7 10.4 (2020) (Resolution: 1200 x 2000 pixels).
 
